@@ -1180,6 +1180,10 @@ input[type="submit"] {
         font-size: 22px;
         letter-spacing: 2px;
     }
+
+    .paragraphTeam {
+        text-align: justify;
+    }
     /* CONTENEDOR GENERAL DE IMAGENES Y TEXTO EN SECCION TEAM */
     .listTeam {
         display: inline-block;
