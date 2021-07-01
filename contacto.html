@@ -1,0 +1,134 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&family=Cookie&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/cc35ccca45.js" crossorigin="anonymous"></script>
+    <title>Bakery Goods</title>
+    <link rel="icon" href="icon/logo.ico">
+</head>
+
+<body>
+    <header class="contact" id="contact">
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav id="navbar" class="navPageContact">
+
+            <!-- LOGO CORPORATIVO -->
+            <a href="index.html" class="siteLogo">
+                Bakery
+            </a>
+            <ul class="listItems">
+                <li>
+                    <a class="menuItem" href="index.html" id="casa">INICIO</a>
+                </li>
+                <li>
+                    <a class="menuItem" href="productos.html" id="productos">PRODUCTOS</a>
+                </li>
+                <li>
+                    <a class="menuItem" href="equipo.html" id="equipo">EQUIPO</a>
+                </li>
+                <li>
+                    <a class="menuItem" href="contacto.html" id="contacto">CONTACTO</a>
+                </li>
+            </ul>
+
+            <!-- CARRITO DEL NAV -->
+            <a href="productos.html" class="trolley">
+                <i class="fas fa-shopping-cart fa-lg"></i>
+            </a>
+
+            <button id="burger-menu-toggler">
+                <i class="fas fa-bars fa-lg" id="open-mobile-menu"></i>
+                <i class="far fa-times-circle fa-lg" id="close-mobile-menu"></i>
+            </button>
+        </nav>
+
+        <form action="" method="$_POST">
+
+            <h2>FORMA PARTE DE LA FAMILIA <span>Bakery</span></h2>
+            <p>Si tenés una pregunta o querés más información, por favor, envíanos un mensaje.</p>
+
+            <div class="containerName">
+                <div class="name">
+                    <label for="nombre">NOMBRE</label>
+                    <input type="text" name="Nombre" id="nombre" placeholder="Escribí tu nombre..." required>
+                </div>
+                <div class="lastName">
+                    <label for="apellido">APELLIDO</label>
+                    <input type="text" name="Apellido" id="apellido" placeholder="Escribí tu apellido..." required>
+                </div>
+            </div>
+            <label for="E-mail">E-MAIL</label>
+            <input type="email" name="E-mail" id="E-mail" placeholder="tuemail@email.com" required>
+            <label for="asunto">ASUNTO</label>
+            <input type="text" name="asunto" id="asunto" placeholder="Asunto" required>
+            <label for="mensaje">MENSAJE</label>
+            <textarea name="mensaje" id="mensaje" rows="4" cols="22" maxlength="3000" placeholder="Tu mensaje"
+                required></textarea>
+            <input type="submit" value="ENVIAR">
+
+        </form>
+    </header>
+    <div id="buttonUp">
+        <i class="fas fa-angle-up fa-lg"></i>
+    </div>
+    <footer>
+
+        <div class="infoFooter">
+            <h3>Bakery</h3>
+            <p>Gracias por llegar al final. No olvides de seguirnos en nuestras redes para conocer más acerca de
+                nuestro día a día.</p>
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.whatsapp.com" target="_blank">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mapAndEmailFooter">
+            <div class="map">
+                <p>Acercate a nuestra sede:</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12192.333847439055!2d-4.45816!3d40.184956!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4035b57551b6f3%3A0x84be095154d712f6!2sCalle%20Falsa%2C%2045908%20Aldea%20en%20Cabo%2C%20Toledo%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sar!4v1621346854460!5m2!1ses!2sar"
+                    width="250" height="220" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="emailFooter">
+                <p>Puedes consultarnos acerca de lo que necesites haciendo click en el siguiente enlace:</p>
+                <div class="registerFooter">
+                    <a href="contacto.html">
+                        ENVIAR
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright">
+            @BySantiagoFerrer
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

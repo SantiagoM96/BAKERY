@@ -1,0 +1,1272 @@
+/* RESETEO */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(241, 231, 214);
+}
+
+/* FUENTES */
+
+@font-face {
+    font-family: futuraDemi;
+    src: url("../fonts/AnyConv.com__FuturaPTDemi.woff");
+}
+
+@font-face {
+    font-family: futuraBook;
+    src: url("../fonts/FuturaPTBook_1.woff");
+}
+
+@font-face {
+    font-family: futuraHeavy;
+    src: url("../fonts/AnyConv.com__FuturaPTHeavy.woff");
+}
+
+/* BARRA DE SCROLLEO */
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #ffa65d;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #E1A87A;
+    border-radius: 5px;
+}
+
+/* BOTON DE IR ARRIBA */
+
+#buttonUp {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: #BC8066;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    bottom: 40px;
+    right: 10px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition-property: border-color, transform;
+    transition-duration: 300ms, 300ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+    z-index: 1;
+    transform: scale(0);
+}
+
+#buttonUp:hover {
+    transform: scale(1.1);
+    border-color: rgba(0, 0, 0, .0);
+}
+
+/* HEADER */
+
+header {
+    background: url("../img/portada.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8vh;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* TÍTULO DE LA PORTADA */
+
+h1 {
+    font-family: futuraHeavy;
+    color: white;
+    font-size: 60px;
+    line-height: 1em;
+    padding: 3vh 0;
+}
+
+/* BOTON DE LA PORTADA */
+
+.boxButtonCover {
+    padding: 5vh 0;
+}
+
+.boxButtonCover a {
+    font-family: futuraDemi;
+    font-size: 11px;
+    letter-spacing: .16em;
+    background-color: rgba(0, 0, 0, .0);
+    color: white;
+    border: 2px solid #e1a87a;
+    padding: 16px;
+    transition-property: background-color, color;
+    transition-duration: 1s, 1s;
+    transition-timing-function: ease-in-out, ease-in-out;
+}
+
+.boxButtonCover a:hover {
+    color: rgba(0, 0, 0, .8);
+    background-color: #E1A87A;
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, .0);
+    width: 100%;
+    height: 8vh;
+    padding: 0 6vw;
+    transition: all 300ms ease-in-out;
+    z-index: 10;
+}
+
+body.scrolled #navbar {
+    transition: all 400ms ease-in-out;
+    z-index: 10;
+    background-color: #2c2828;
+}
+
+.siteLogo, .menuItem, .trolley {
+    padding: 1vh 0;
+}
+
+/* Logo */
+
+.siteLogo {
+    color: white;
+    font-size: 45px;
+    font-family: 'Cookie', cursive;
+    transition: color 0.5s ease-in-out;
+}
+
+.siteLogo:hover {
+    opacity: 0.8;
+    color: #E1A87A;
+}
+
+/* LISTA de la barra de navegación */
+
+.listItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: futuraDemi;
+}
+
+/* ITEMS de la barra de navegación */
+
+.menuItem {
+    margin: 2vw;
+    color: white;
+    font-size: 11px;
+    transition: color 0.5s ease-in-out;
+    letter-spacing: 2px;
+}
+
+li a:hover {
+    opacity: 0.8;
+    color: #E1A87A;
+}
+
+/* CARRITO DE COMPRAS IMG */
+
+.trolley i {
+    color: white;
+    transition-property: opacity, color;
+    transition-duration: 0.5s, 0.5s;
+    transition-timing-function: ease-in-out, ease-in-out;
+}
+
+.trolley i:hover {
+    opacity: 0.8;
+    color: #E1A87A;
+}
+
+#burger-menu-toggler {
+    display: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: #f3f3f3;
+    font-size: 20px;
+    z-index: 2;
+}
+
+/* SECCIÓN PRESENTACION */
+
+#presentation {
+    background-color: rgb(241, 231, 214);
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12vh 5vw;
+}
+
+/* Imagenes de la presentacion */
+
+.imgPresentation {
+    text-align: center;
+    max-width: 50%;
+}
+
+.imgPresentation img {
+    border-radius: 10px;
+    box-shadow: 0 0 4px #333;
+    width: 65%;
+    height: auto;
+    transition-property: transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+}
+
+.imgPresentation img:hover {
+    transform: scale(1.03);
+}
+
+/* Texto de la presentacion */
+
+.textPresentation {
+    max-width: 50%;
+    padding-right: 3vw;
+}
+
+.textPresentation h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    letter-spacing: 8px;
+    font-weight: 600;
+    color: #383434;
+}
+
+.textPresentation p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 2em;
+    color: #3f3b3b;
+    text-align: justify;
+}
+
+/* SECCION PREMIOS */
+
+.bakeryAwards {
+    position: relative;
+    min-height: 70vh;
+    background: url("../img/bakery-1868925.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.degBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* TEXTO DE LA SECCION PREMIOS */
+
+.bakeryAwards h2, .bakeryAwards p, .bakeryAwards p span, .awardsButton, .awardsButton a {
+    z-index: 1;
+    width: 90%;
+}
+
+.bakeryAwards h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 50px;
+    font-size: 35px;
+    letter-spacing: 8px;
+    padding-bottom: 2vh;
+}
+
+.bakeryAwards p {
+    font-family: futuraBook;
+    font-size: 22px;
+    line-height: 2em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.bakeryAwards :nth-child(4) {
+    padding-bottom: 2vh;
+}
+
+.bakeryAwards p span {
+    font-family: 'Cookie', cursive;
+    font-size: 35px;
+}
+
+/* BOTON DE LA SECCION PREMIOS */
+
+.awardsButton {
+    padding: 3vh 0;
+}
+
+.awardsButton a {
+    font-family: futuraDemi;
+    font-size: 13px;
+    letter-spacing: .16em;
+    background-color: #E1A87A;
+    color: white;
+    padding: 16px;
+    transition: color 1s ease-in-out;
+}
+
+/* SECCION BAKERY WINNERS */
+
+.bakeryWinners {
+    padding: 4vh 5vw;
+    background-color: rgb(241, 231, 214);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TITULO DE LA SECCION GANADORES BAKERY */
+
+.bakeryWinners h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    color: #383434;
+    padding-bottom: 10vh;
+}
+
+/* IMAGENES DE LA SECCION GANADORES */
+
+.winnersImg {
+    display: flex;
+    width: 100%;
+}
+
+.winnersImg figure {
+    padding: 0 2vw;
+}
+
+.containerImgWinners {
+    border-radius: 10px;
+    box-shadow: 0 0 4px #333;
+    overflow: hidden;
+}
+
+.winnersImg figure img {
+    width: 100%;
+    height: auto;
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+}
+
+.winnersImg figure img:hover {
+    transform: scale(1.25);
+}
+
+/* TEXTO DE LA SECCION GANADORES */
+
+.winnersImg figcaption h4 {
+    padding-top: 2vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-align: justify;
+}
+
+.winnersImg figcaption p {
+    padding-top: 1vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    text-align: justify;
+}
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 8vh;
+    background-color: #222222;
+    color: white;
+    font-size: 15px;
+}
+
+/* PRIMER TEXTO DE LA FOOTER */
+
+.infoFooter {
+    text-align: center;
+    padding-bottom: 14vh;
+    line-height: 2em;
+}
+
+.infoFooter h3 {
+    font-size: 45px;
+    font-family: 'Cookie', cursive;
+    padding-bottom: 2vh;
+}
+
+.infoFooter p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 1vh;
+}
+
+.infoFooter a i {
+    color: #E1A87A;
+    transition: opacity 0.5s ease-in-out;
+    margin: 2.5vh 1.5vw;
+}
+
+.infoFooter a i:hover {
+    opacity: 0.6;
+}
+
+/* EMAIL Y UBICACIÓN EN FOOTER */
+
+.mapAndEmailFooter {
+    display: flex;
+    justify-content: center;
+}
+
+/* MAPA EN FOOTER */
+
+.map {
+    padding: 0 3vw;
+    min-width: 50%;
+    text-align: center;
+}
+
+.map p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-bottom: 2vh;
+    line-height: 2em;
+}
+
+/* EMAIL EN FOOTER */
+
+.emailFooter {
+    padding: 0 3vw;
+    max-width: 50%;
+}
+
+.emailFooter p {
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 4vh;
+    font-weight: 400;
+    text-align: center;
+    line-height: 2em;
+}
+
+/* BOTON DE REGISTRO */
+
+.registerFooter {
+    display: flex;
+    justify-content: center;
+}
+
+.registerFooter a {
+    font-family: futuraDemi;
+    font-size: 13px;
+    letter-spacing: .16em;
+    background-color: #E1A87A;
+    color: white;
+    padding: 14px;
+}
+
+/* COPYRIGHT */
+
+.copyright {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 2vh;
+    background-color: #E1A87A;
+    color: rgb(51, 49, 49);
+    font-family: futuraBook;
+    text-align: center;
+    width: 100%;
+}
+
+/* SITIOS DE LA PAGINA WEB */
+
+/* ESTILOS GENERALES */
+
+.products .cover, .team .cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.navPageContact {
+    background-color: #2c2828;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    padding: 0 6vw;
+}
+
+.navPageContact {
+    position: fixed;
+    z-index: 10;
+}
+
+.navPageContact .listItems {
+    font-family: futuraDemi;
+}
+
+/* PAGINA DE PRODUCTOS */
+
+/* HEADER DE PRODUCTOS */
+
+.products {
+    background: url("../img/breadCover.png");
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8vh;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* SECCION DE PRODUCTOS */
+
+#listProducts {
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh 1vw;
+    z-index: 1000;
+}
+
+/* TITULOS DE LA SECCION PRODUCTOS */
+
+#listProducts h2 {
+    font-family: futuraHeavy;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    color: #383434;
+    padding-bottom: 12vh;
+}
+
+/* CONTENEDOR DE TODAS LAS IMAGENES DE LA SECCION PRODUCTOS */
+
+.productsImg {
+    display: flex;
+    align-items: center;
+}
+
+/* FIGURE DE LAS IMAGENES (SECCION PRODUCTOS) */
+
+.productsImg .imgContainer {
+    position: relative;
+    cursor: pointer;
+    margin: 0 1.5vw;
+}
+
+.productsImg .imgContainer img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 16px #333;
+    border-radius: 40px;
+}
+
+/* CAPA DE CADA IMAGEN */
+
+.productsImg .imgContainer .cap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition-property: opacity, visibility;
+    transition-duration: 1s, 1s;
+    transition-timing-function: ease-in-out;
+    color: white;
+    font-size: 20px;
+}
+
+.imgContainer:hover>.cap {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* FIGCAPTION PARA VERSION MOBILE DE CADA IMAGEN SECCION PRODUCTOS */
+
+.imgContainer figcaption {
+    display: none;
+    font-size: 14px;
+    color: rgb(51, 49, 49);
+    padding: 4vh;
+    text-align: center;
+}
+
+/* PAGINA DE EQUIPO */
+
+.team {
+    background: url("../img/TEAM.png");
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8vh;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* SECCION TEAM */
+
+#fullTeam {
+    min-height: 100vh;
+    width: 100%;
+    padding: 8vh 4vw;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* TITULO DE LA SECCION TEAM */
+
+#fullTeam h2 {
+    font-family: futuraHeavy;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    color: #383434;
+    padding-bottom: 2vh;
+}
+
+.paragraphTeam {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 2em;
+    padding-bottom: 6vh;
+    text-align: center;
+}
+
+/* CONTENEDOR DE TODAS LAS IMAGENES DE LA SECCION TEAM */
+
+.listTeam {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FIGURE DE LA SECCION TEAM */
+
+.listTeam .imgContainer {
+    margin: 0 1.5vw;
+    position: relative;
+    cursor: pointer;
+}
+
+/* IMAGEN DE CADA INTEGRANTE */
+
+.listTeam .imgContainer img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px #333;
+}
+
+/* CAPA DE CADA IMAGEN SECCION TEAM */
+
+.listTeam .imgContainer .cap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition-property: opacity, visibility;
+    transition-duration: 1s, 1s;
+    transition-timing-function: ease-in-out;
+    color: white;
+    font-size: 20px;
+}
+
+.imgContainer:hover>.cap {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* FIGCAPTION PARA VERSION MOBILE DE CADA IMAGEN SECCION MOBILE */
+
+.imgContainer figcaption {
+    display: none;
+    font-size: 12px;
+    color: rgb(51, 49, 49);
+    padding: 3vh 6vw 10vh 6vw;
+    text-align: center;
+}
+
+/* PAGINA DE CONTACTO */
+
+.contact {
+    background: url("../img/contactCover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 8vh;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact #navBar {
+    background-color: #2C2828;
+}
+
+/* FORMULARIO */
+
+form {
+    margin-top: 6vh;
+    padding: 4vh;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    background-color: rgb(241, 231, 214);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    color: rgb(51, 49, 49);
+    box-shadow: 0 0 16px #333;
+    z-index: 1;
+}
+
+/* TITULO DE FORM */
+
+form h2, form p {
+    padding-bottom: 2vh;
+    text-align: center;
+}
+
+form h2 {
+    font-family: futuraHeavy;
+    font-size: 24px;
+}
+
+form h2 span {
+    font-family: 'Cookie', cursive;
+    font-size: 35px;
+}
+
+form p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding-bottom: 4vh;
+}
+
+/* GENERALES DE FORM */
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-top: 1vh;
+    font-family: futuraDemi;
+    letter-spacing: 1px;
+}
+
+input, textarea {
+    padding: 1.5vh 1vw;
+    margin: 1.5vh 0;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 2px #333;
+}
+
+/* NOMBRE Y APELLIDO */
+
+/* CONTENEDOR DE NOMBRE Y APELLIDO */
+
+.containerName {
+    display: flex;
+}
+
+/* NOMBRE */
+
+.name {
+    margin-right: 1vw;
+}
+
+/* APELLIDO */
+
+.lastName {
+    margin-left: 1vw;
+}
+
+.name, .lastName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+/* MAIL DE FORMULARIO */
+
+input[name="E-mail"] {
+    width: 100%;
+}
+
+/* BOTON DE ENVIAR FORMULARIO */
+
+input[type="submit"] {
+    background-color: #E1A87A;
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+    margin-top: 2vh;
+    padding: 1.5vh;
+    font-size: 15px;
+    color: white;
+    font-family: futuraDemi;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+/* TABLETS */
+
+@media all and (min-width: 700px) and (max-width: 1024px) {
+    #presentation {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .textPresentation h2 {
+        text-align: center;
+    }
+    .textPresentation {
+        max-width: 100%;
+        padding-bottom: 10vh;
+    }
+    .imgPresentation img {
+        width: 90%;
+        height: auto;
+    }
+    .bakeryAwards h2 {
+        font-size: 26px;
+    }
+    .bakeryAwards p {
+        font-size: 19px;
+    }
+    .awardsText p {
+        font-size: 18px;
+    }
+    .bakeryWinners {
+        min-height: 80vh;
+        padding: 6vh 2vw;
+    }
+    .bakeryWinners h2 {
+        font-size: 26px;
+        padding-bottom: 4vh;
+    }
+    .winnersImg figcaption h4 {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    .winnersImg figcaption p {
+        font-size: 12px;
+    }
+    .titleProducts h2 {
+        text-align: center;
+    }
+    #listProducts h2 {
+        font-size: 26px;
+        padding-top: 4vh;
+        padding-bottom: 6vh;
+    }
+    .productsImg {
+        flex-direction: column;
+    }
+    .imgContainer {
+        padding-bottom: 2vh;
+    }
+    .imgContainer:hover>.cap {
+        pointer-events: none;
+        visibility: hidden;
+    }
+    .imgContainer figcaption {
+        display: block;
+    }
+    .imgContainer figcaption h3, .imgContainer figcaption p {
+        font-size: 22px;
+    }
+    .contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #fullTeam {
+        padding: 6vh 2vw;
+    }
+    #fullTeam h2 {
+        font-size: 24px;
+    }
+    .paragraphTeam {
+        font-size: 16px;
+    }
+    .listTeam {
+        flex-direction: column;
+    }
+    #buttonUp {
+        width: 30px;
+        height: 30px;
+        right: 2px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    /* BOTON IR ARRIBA */
+    #buttonUp {
+        width: 30px;
+        height: 30px;
+        right: 2px;
+    }
+    /* COVER */
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /* HOVER ELIMINADOS EN VERSION MOBILE */
+    .imgPresentation img, .winnersImg figure img {
+        pointer-events: none;
+    }
+    /* ESTILOS GENERALES VERSION MOBILE DE HEADER */
+    h1 {
+        font-size: 40px;
+    }
+    .boxButtonCover {
+        padding: 18px;
+        font-size: 12px;
+    }
+    .trolley {
+        display: none;
+    }
+    .listItems {
+        display: none;
+    }
+    /* PRESENTATION */
+    #presentation {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 7vh 2vw;
+    }
+    /* IMAGEN DE LA SECCION PRESENTACION DE INICIO */
+    .imgPresentation {
+        padding: 2vh;
+        max-width: 100%;
+    }
+    .imgPresentation img {
+        width: 90%;
+        height: auto;
+    }
+    /* TEXTO DE LA SECCION PRESENTACION DE INICIO */
+    .textPresentation {
+        max-width: 100%;
+        padding: 4vh;
+    }
+    .textPresentation h2 {
+        letter-spacing: 2px;
+        font-size: 22px;
+        text-align: center;
+    }
+    .textPresentation p {
+        font-size: 14px;
+    }
+    /* SECCION AWARDS*/
+    .bakeryAwards {
+        padding: 8vh 3vw;
+    }
+    .bakeryAwards h2 {
+        letter-spacing: 4px;
+        font-size: 22px;
+    }
+    .bakeryAwards p {
+        font-size: 18px;
+        text-align: justify;
+    }
+    .bakeryAwards p span {
+        font-size: 24px;
+    }
+    /* TEXTO DE AWARDS */
+    .awardsText h2 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+    /* BOTON DE AWARDS */
+    .awardsButton {
+        padding: 3vh 0;
+    }
+    /* WINNERS */
+    .bakeryWinners {
+        padding: 12vh 4vw;
+    }
+    .bakeryWinners h2 {
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+    /* IMAGENES DE LA SECCION WINNERS */
+    .winnersImg {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .winnersImg figure {
+        padding: 0 2vw 8vh 2vw;
+    }
+    .winnersImg figure img {
+        width: 100%;
+    }
+    /* FIGCAPTION DE LAS IMAGENES EN SECCION WINNERS */
+    .winnersImg figcaption h4 {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    .winnersImg figcaption p {
+        font-size: 14px;
+    }
+    /* FOOTER */
+    footer {
+        padding: 8vh 6vw;
+    }
+    /* TEXTO PRINCIPAL DE FOOTER */
+    .infoFooter p {
+        font-size: 15px;
+        line-height: 2em;
+        padding-bottom: 1vh;
+    }
+    .infoFooter h3 {
+        padding-bottom: 3vh;
+    }
+    footer ul {
+        padding-top: 0vh;
+    }
+    footer ul li {
+        margin: 0 4vw;
+    }
+    /* CONTENEDOR DE UBICACION Y CORREO EN FOOTER */
+    .mapAndEmailFooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .map, .emailFooter {
+        padding-bottom: 14vh;
+    }
+    .emailFooter {
+        max-width: 100%;
+    }
+    /* PRODUCTS */
+    /* SECCION PRODUCTOS */
+    #listProducts {
+        min-height: 100vh;
+        display: flex;
+        padding: 8vh 6vw;
+    }
+    /* TITULO DE SECCION PRODUCTOS */
+    #listProducts h2 {
+        font-size: 22px;
+        text-align: center;
+        padding-bottom: 8vh;
+        letter-spacing: 2px;
+    }
+    /* CONTENEDOR DE TODAS LAS IMAGENES SECCION PRODUCTOS */
+    .productsImg {
+        display: inline-block;
+    }
+    /* CAPA DE CADA IMAGEN SECCION PRODUCTOS DESACTIVADA */
+    .imgContainer:hover>.cap {
+        pointer-events: none;
+        visibility: hidden;
+    }
+    /* FIGCAPTION DE CADA IMAGEN SOLO ACTIVA EN VERSION MOBILE (aplica estilos para seccion team y productos)*/
+    .imgContainer figcaption {
+        display: block;
+    }
+    .imgContainer figcaption h3, .imgContainer figcaption p {
+        font-size: 20px;
+    }
+    /* TEAM */
+    /* TITULO DE SECCION TEAM */
+    #fullTeam {
+        padding: 8vh 6vw;
+        text-align: center;
+    }
+    #fullTeam h2 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+    /* CONTENEDOR GENERAL DE IMAGENES Y TEXTO EN SECCION TEAM */
+    .listTeam {
+        display: inline-block;
+    }
+    /* CAPA DE CADA IMAGEN EN SECCION TEAM DESACTIVADA */
+    .imgContainer:hover>.cap {
+        pointer-events: none;
+        visibility: hidden;
+    }
+    /* CONTACTO */
+    /* TITULO DEL FORMULARIO */
+    form h2 {
+        font-size: 25px;
+    }
+    form p {
+        font-size: 15px;
+        text-align: center;
+        line-height: 1.5em;
+    }
+    form p span {
+        font-size: 35px;
+    }
+    /* ESTILOS GENERAL PARA FORMULARIO EN CONTACTO */
+    form label, form input {
+        font-size: 12px;
+    }
+    /* SE QUITA BACKGROUND EN PAGINA DE CONTACTO */
+    .contact {
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact form {
+        width: 100vw;
+        height: auto;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    /* ESTILO PARA EL BOTON DE ENVIAR */
+    .contact form input[type="submit"] {
+        font-size: 13px;
+    }
+    /* ESTILO PARA NOMBRE Y APELLIDO DEL FORMULARIO */
+    .containerName {
+        display: flex;
+        justify-content: space-between;
+    }
+    .name, .lastName {
+        width: 48%;
+    }
+    /* MENU MOBILE */
+    .siteLogo {
+        font-size: 35px;
+    }
+    #burger-menu-toggler {
+        display: block;
+        color: rgb(255, 255, 255);
+    }
+    #close-mobile-menu {
+        display: none;
+    }
+    .mobile-menu-active {
+        overflow: hidden;
+    }
+    .mobile-menu-active #open-mobile-menu {
+        display: none;
+    }
+    .mobile-menu-active #close-mobile-menu {
+        display: block;
+    }
+    .mobile-menu-active .listItems {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        font-family: futuraBook;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+        background: #E1A87A
+    }
+    .mobile-menu-active .menuItem {
+        font-size: 20px;
+        color: rgb(51, 49, 49);
+    }
+}
